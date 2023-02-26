@@ -1,6 +1,6 @@
 @import 'variables';
 
-// General styles
+//  styles
 * {
     &, &:before,  &:after {
         box-sizing: border-box;
@@ -80,13 +80,14 @@ h2 {
 }
 
 // Header
-// Варіант 1 - додавання цих кутків через псевдоелемент як фонові картинки;
+
 header {
         background: {
-            image: url('../img/bcg/bcg-header/header-vectors.png');
+            image: url('/img/header-vectors.png');
             repeat: no-repeat;
             size: cover;
             position: center;
+            color: var(--bcg-color);
         }
         position: relative;
 
@@ -97,43 +98,9 @@ header {
                 left: 0;
                 bottom: 0;
                 right: 0;
-                background: url('../img/bcg/bcg-header/top.png') no-repeat top right,url('../img/bcg/bcg-header/bottom.png') no-repeat bottom left;
+                background: url('img/top.png') no-repeat top right,url('img/bottom.png') no-repeat bottom left;
         }
         }
-
-
-// Варіант 2 - фонові кутки як лінійний градієнт (виникає конфлікт фонів);
-// header {
-//     background: {
-//         image: url('../img/bcg/bcg-header/header-vectors.png');
-//         repeat: no-repeat;
-//         size: cover;
-//         position: center;
-//     }
-//     position: relative;
-//     z-index: 2;
-
-//     &::after {
-//         content: '';
-//         position: absolute;
-//         top: 0;
-//         left: 0;
-//         bottom: 0;
-//         right: 0;
-//         background: linear-gradient(5deg, var(--section-title-color) 0%, var(--section-title-color) 10%, var(--bcg-color) 10%,var(--bcg-color) 90%,  var(--section-title-color) 10%);
-//         z-index: 1;
-//     }
-// }
-
-//  Варіант 3 - фонові кутки як фон, але тоді фон з векторами накладається на градієнт;
-
-// header {
-//     background: {
-//         image: url('../img/bcg/bcg-header/header-vectors.png'), linear-gradient(5deg, var(--section-title-color) 0%, var(--section-title-color) 10%, var(--bcg-color) 10%,var(--bcg-color) 90%,  var(--section-title-color) 10%);
-//         -webkit-size: cover;
-//         size: cover;
-//     }
-// }
 
 .header-wrapper {
     padding: 180px 0;
@@ -258,7 +225,7 @@ header {
 .testymonials {
     background: {
         color: var(--bcg-color);
-        image: url('../img/bcg/bcg-testymonials/testymonials-bcg.png');
+        image: url('/img/testymonials-bcp.png');
         size: cover;
         position: center;
     }
@@ -360,16 +327,16 @@ header {
     }
 
     .email-link{
-        background-image: url('../img/svg/contact/email.svg');
+        background-image: url('/img/email.svg');
     }
 
     .phone-link {
-        background-image: url('../img/svg/contact/phone.svg');
+        background-image: url('/img/phone.svg');
     }
 
     .address-link {
         padding-top: 5px;
-        background-image: url('../img/svg/contact/location.svg');
+        background-image: url('/img/location.svg');
     }
 
 .footer-contact-list {
@@ -418,7 +385,7 @@ header {
     size: var(--m);
     }
     background: var(--bcg-color);
-    background-image: url("../img/bcg/bcg-header/header-vectors.png");
+    background-image: url("/img/header-vectors.png");
     border-radius: 20px;
     box-shadow: 0px 5px 10px 0px rgba(19, 2, 2, 0.151);
     color: var(--primary-color);
